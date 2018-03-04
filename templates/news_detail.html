@@ -1,0 +1,88 @@
+{% extends "home.html" %}
+
+
+{% block news_detail %}
+    <div class="main_cont_left">
+        <div class="trends_we">
+
+            <div class="div_head" style="padding: 30px 10px 10px 40px">
+
+                <div class="head_title">
+                    <span class="allcontent_head_title_bg"></span>
+                    新闻详情:
+                </div>
+            </div>
+
+            <div class="jysggright clearFloat" style="max-width: 760px;">
+                {% for detail_news in news_detail_obj %}
+                    <div class="title_xqy" id="sharetitle" name="title">{{ detail_news.title }}</div>
+                    <div class="fenxiang">
+                        <div class="fxleft"><a>{{ detail_news.create_time }}</a></div>
+
+                    </div>
+                    <div class="jysggnr">
+
+                        <div class="TRS_Editor"><p>{{ detail_news.content }}</p></div>
+
+                    </div>
+
+                    <div class="jysggsxp" id="docdetailid" name="20618" style="margin-top: 30px">
+                    {% if news_id_after %}
+                        {% for item in news_id_after %}
+                            <p>上一篇：<a data-bind="attr:{href:beforeDetailHref},text:beforeDetailTitle"
+                                      href="{% url 'news_detail' item.id %}">{{ item.title }}</a></p>
+                        {% endfor %}
+                    {% endif %}
+
+                    {% if news_id_before %}
+                        {% for item in news_id_before %}
+                            <p>下一篇：<a data-bind="attr:{href:afterDetailHref},text:afterDetailTitle"
+                                      href="{% url 'news_detail' item.id %}">{{ item.title }}</a></p>
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block data_quotes %}
+    <div class="main_cont_right">
+        <div class="data_quotes">
+            <div class="head_title" style="margin-bottom: 30px"><span class="head_title_quotes"></span>
+                <h2>评论区</h2>
+            </div>
+            <form method="POST" action="">{% csrf_token %}
+                输入评论:<br>
+                <textarea name="comments" style="width:200px;height:38px;"></textarea>
+                <input type="submit" value="提交评论">
+            </form>
+
+            <div class="item">
+                <div class="comment-list" style="max-width: 300px">
+                    {% for comment_item in comment_tree %}
+                        <div class="comment-box">
+                            {% if not parent %}
+                                <span>{{ comment_item.content }}</span>
+                            {% endif %}
+
+                            <div class="comment-box" style="margin-left: 230px">
+                                <span>--root</span>
+                            </div>
+                        </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+
+
+
+

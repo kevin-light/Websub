@@ -1,0 +1,14 @@
+@media screen and (min-width: 761px) {
+  .content_main .notice_list ul li img {
+    display: inline;
+    display: inline\9;
+  }
+}
+
+
+
+@media screen and (max-width: 767px) {
+  .content_main .notice_list img {
+    display: none;
+  }
+}

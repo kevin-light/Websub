@@ -1,0 +1,59 @@
+{% extends 'home.html' %}
+
+
+{% block news_detail %}
+    <div class="main index_main">
+        <div class="know_we_main">
+            <div class="main_cont clearFloat">
+                <div class="main_cont_left">
+
+                    <div class="trends_we">
+                        <div class="div_head">
+                            {% block  head_title_trend %}
+                                <div class="head_title"><span class="head_title_trend"></span>新闻公告</div>
+                            {% endblock %}
+                            <div class="more" style="position:relative"><a href="#"
+                                                                           style="display:block;position:absolute;top:0;left;0;height:100%;width:100%"
+                                                                           target="_blank"></a>更多 &gt;</div>
+                        </div>
+                        <div class="trends_main">
+
+                            <div class="trends_main_list">
+                                <ul>
+
+                                    {% for news_item in queryset %}
+                                        <li><a href="{% url 'news_detail' news_item.id %}"
+                                               target="_blank">{{ news_item.title }}</a><span
+                                                class="time comparetime">{{ news_item.create_time }}</span></li>
+                                    {% endfor %}
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="pagination">
+                      <span class="step-links">
+                          {% if queryset.has_previous %}
+                              <a href="?page={{ queryset.previous_page_number }}">上一页</a>
+                          {% endif %}
+                          <span class="current">
+                              第{{ queryset.number }}页，共{{ queryset.paginator.num_pages }}页。
+                          </span>
+                          {% if queryset.has_next %}
+                              <a href="?page={{ queryset.next_page_number }}">下一页</a>
+                          {% endif %}
+                      </span>
+                        </div>
+
+                    </div>
+                </div>
+
+                {% block data_quotes %}
+
+                {% endblock %}
+
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

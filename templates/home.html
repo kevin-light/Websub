@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<!-- saved from url=(0020)# -->
+<html style="">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Home</title>
+
+    <link rel="apple-touch-icon" href="../static/img/cffexlogo.png" sizes="57x57">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta content="false" name="twcClient" id="twcClient">
+    <meta name="google-site-verification" content="gTqsg1li940N-7fYO80mX2BZGrj1ABVHWMLx92PBxhM">
+
+    {% block css %}
+
+        <link href="../static/css/libcss.min.css" rel="stylesheet">
+        <link href="../static/css/website.min.css" rel="stylesheet">
+
+
+        <link rel="shortcut icon" type="image/x-icon" href="../static/img/icon.ico" media="screen">
+        <title> | Home</title>
+
+        <script src="../static/js/selectivizr.js"></script><!-- IE8兼容css3选择器 -->
+        <noscript>&lt;link rel="stylesheet" href="[fallback css]" /&gt;</noscript><!-- IE8兼容css3选择器 -->
+
+    {% endblock %}
+</head>
+<body>
+<div class="box index_box">
+    <div style="display:none;">
+        <img src="../static/img/cffexlogo300.jpg">
+    </div>
+    <div class="show_IE">
+        <div class="show_main">
+            <div class="warm_div"></div>
+            <div class="text">
+                由于您使用的浏览器版本过低，无法使用本网站所有功能，<br>建议升级至IE9.0以上版本，或使用Chrome、Safari最新版本浏览。
+            </div>
+            <div class="close_div_ie">关闭</div>
+        </div>
+    </div>
+    <div class="move_head">
+        <div class="navbar_header">
+            <div class="navbar_toggle collapsed">
+                <span class="icon_bar"></span>
+                <span class="icon_bar"></span>
+                <span class="icon_bar"></span>
+            </div>
+        </div>
+        <div class="move_logo">
+            <img src="../static/img/move-div-head-logo.png">
+        </div>
+        <div class="move_head_search">
+        </div>
+
+    </div>
+    <div class="header">
+        <div class="lianjie">
+            <ul class="head_ul">
+                <li class="app">
+                    <img src="../static/img/head-bg1.png"> APP
+                    <div class="drop_down_div drop_down_app">
+                        <img src="../static/img/app.png" width="99" height="100" alt="">
+                        <span class="text">扫一扫 下载APP					 </span>
+                    </div>
+                </li>
+                <li class="second_li">|</li>
+                <li class="weixin">
+                    <a>微信</a>
+                    <div class="drop_down_div drop_down_wx">
+                        <img src="../static/img/head-img1.jpg" width="99" height="100" alt="">
+                        <span class="text">微信二维码</span>
+                    </div>
+                </li>
+                <li class="second_li">|</li>
+                <li class="weibo">
+                    微博<img src="../static/img/head-bg2.png" class="weibo_img">
+                    <div class="drop_down_div drop_down_wb">
+                        <a href="http://weibo.com/cffexfabu" target="_blank"><img
+                                src="../static/img/head-weibo-img3.jpg" width="154" height="54"></a>
+                        <a href="http://t.qq.com/cffexfabu" target="_blank"><img src="../static/img/head-weibo-img4.jpg"
+                                                                                 width="154" height="54"></a>
+                        <a href="http://t.home.news.cn/cffex" target="_blank"><img
+                                src="../static/img/head-weibo-img2.jpg" width="154" height="54"></a>
+                        <a href="http://t.people.com.cn/cffexfabu" target="_blank"><img
+                                src="../static/img/head-weibo-img1.jpg" width="154" height="54"></a>
+                    </div>
+                </li>
+                <li class="second_li">|</li>
+                <li class="xglj">
+                    相关网站<img src="../static/img/head-bg2.png">
+                    <div class="drop_down_div drop_down_lianjie">
+                        <ul>
+                            <li><a href="http://www.e-cffex.com.cn/" target="_blank">中金所期货期权学院</a></li>
+                            <li><a href="http://www.cffexit.com.cn/" target="_blank">中金所技术公司</a></li>
+                            <li><a href="http://www.cifd.com.cn/" target="_blank">衍生品研究院</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="second_li">|</li>
+                <li class="english"><a href="#en_new/index.html" target="_blank">ENGLISH</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="brand">
+        <img src="../static/img/brand-logo.jpg" width="340" height="68" style="padding-top: 13px; float: left;">
+        <div class="search">
+            <div class="input_div">
+
+            </div>
+            <div class="brand_share">
+                <div class="brand_share_div">
+                    <div class="img_erwei"></div>
+                    <p>分享微信朋友圈</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="content">
+        <div class="nav">
+            <ul class="nav_ul">
+                <li class="nav_li"><a class="nav_li_a" href="{% url 'home' %}">首 页</a><span>|</span></li>
+                <li class="nav_li">
+                    <a class="nav_li_a" href="{% url 'news' %}">新闻公告</a><span>|</span>
+
+                    <div class="nav_news_div nav_li_div">
+
+                    </div>
+                </li>
+                <li class="nav_li">
+                    <a class="nav_li_a" href="#">产品</a><span>|</span>
+
+                    <div class="nav_product_div nav_li_div clearFloat" style="">
+
+                    </div>
+                </li>
+
+                <li class="nav_li">
+                    <a class="nav_li_a" href="#">更多</a>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+
+{##}
+{#    <div class="move_index_banner">#}
+{#        <div class="swiper-container move-swiper-container-banner">#}
+{#            <div class="swiper-wrapper" style="transition-duration: 0.3s;"><a href="http://www.e-cffex.com.cn/"#}
+{#                                                                              class="swiper-slide swiper-slide1 swiper-slide-duplicate"#}
+{#                                                                              target="_blank"><img#}
+{#                    src="../static/img/W020161219613017943911.jpg" alt=""></a>#}
+{##}
+{#                <a href="http://www.cffex.com.cn/" class="swiper-slide swiper-slide1" target="_blank"><img#}
+{#                        src="../static/img/W020180214459570905138.jpg" alt=""></a>#}
+{##}
+{#                <a href="http://www.cffex.com.cn/gyjys/jysjs/gk/" class="swiper-slide swiper-slide1"#}
+{#                   target="_blank"><img src="../static/img/W020170111379271030468.jpg" alt=""></a>#}
+{##}
+{#                <a href="http://www.e-cffex.com.cn/" class="swiper-slide swiper-slide1" target="_blank"><img#}
+{#                        src="../static/img/W020161219613017943911.jpg" alt=""></a>#}
+{##}
+{#                <a href="http://www.cffex.com.cn/" class="swiper-slide swiper-slide1 swiper-slide-duplicate"#}
+{#                   target="_blank"><img src="../static/img/W020180214459570905138.jpg" alt=""></a></div>#}
+{#        </div>#}
+{#    </div>#}
+
+
+    <div class="main index_main">
+        <div class="know_we_main">
+            <div class="main_cont clearFloat">
+
+                {% block news_detail %}
+                    <div class="main_cont_left">
+                        <div class="trends_we">
+                            <div class="div_head">
+                                {% block  head_title_trend %}
+                                    <div class="head_title"><span class="head_title_trend"></span>新闻所动态</div>
+                                {% endblock %}
+                                <div class="more" style="position:relative"><a href="#"
+                                                                               style="display:block;position:absolute;top:0;left;0;height:100%;width:100%"
+                                                                               target="_blank"></a>更多 &gt;</div>
+                            </div>
+                            <div class="trends_main">
+
+                                <div class="trends_main_list">
+                                    <ul>
+
+                                        {% for news_item in queryset %}
+                                            <li><a href="{% url 'news_detail' news_item.id %}"
+                                                   target="_blank">{{ news_item.title }}</a><span
+                                                    class="time comparetime">{{ news_item.create_time }}</span></li>
+                                        {% endfor %}
+
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="pagination">
+                        <span class="step-links">
+                          {% if queryset.has_previous %}
+                              <a href="?page={{ queryset.previous_page_number }}">上一页</a>
+                          {% endif %}
+                            <span class="current">
+                              第{{ queryset.number }}页，共{{ queryset.paginator.num_pages }}页。
+                          </span>
+                            {% if queryset.has_next %}
+                                <a href="?page={{ queryset.next_page_number }}">下一页</a>
+                            {% endif %}
+                        </span>
+                            </div>
+                        </div>
+                    </div>
+                {% endblock %}
+
+                {% block data_quotes %}
+                    <div class="main_cont_right">
+                        <div class="data_quotes">
+                            <div class="div_head">
+                                <div class="head_title"><span class="head_title_quotes"></span> 行情数据</div>
+                                <div class="more more_show" style="display:block;position:relative"><a
+                                        style="display:block;top:0;left:0px;height:100%;width:100%"
+                                        href="#sj/hqsj/rtj/" target="_blank">更多 &gt;</a></div>
+                            </div>
+                            <div class="data_quotes_btn clearFloat">
+                                <a class="btn-a" href="#sj/jyrl/" target="_blank">交易日历</a>
+                                <a class="btn-a other-a" href="#sj/hqsj/rtj/"
+                                   target="_blank">日行情数据</a>
+                                <a class="btn-a" href="#sj/ccpm/" target="_blank">成交持仓排名</a>
+                            </div>
+                            <div class="data_quotes_tab">
+                                <div class="quotes_tab_head">
+                                    <a name="main" class="other_width_first action"
+                                       data-bind="click:getMainData">主力合约</a>
+                                    <a name="IF" data-bind="click:getDelayProData">IF</a>
+                                    <a name="IC" data-bind="click:getDelayProData">IC</a>
+                                    <a name="IH" data-bind="click:getDelayProData">IH</a>
+                                    <a name="TF" data-bind="click:getDelayProData">TF</a>
+                                    <a name="T" class="other_width_second" data-bind="click:getDelayProData">T</a>
+                                </div>
+                                <div class="quotes_tab_cont">
+                                    <div class="quotes_tab_ul">
+                                        <ul class="main_ul" style="display: block">
+                                            <li><a class="jriea">合约</a><a class="jrieb">最新价</a><a class="jriec">涨跌</a><a
+                                                    class="jried">成交量</a></li>
+                                            <!-- ko foreach:delayProData -->
+                                            <li><a class="jriea" data-bind="text:instrumentid">IF1803</a>
+                                                <a class="jrieb" data-bind="text:lastprice">4035.00</a>
+                                                <a class="color_red jriec" data-bind="text:updown,css:color">↑13.80</a>
+                                                <a class="jried" data-bind="text:volumn">19146</a>
+                                            </li>
+
+                                            <li><a class="jriea" data-bind="text:instrumentid">IC1803</a>
+                                                <a class="jrieb" data-bind="text:lastprice">6057.80</a>
+                                                <a class="color_red jriec" data-bind="text:updown,css:color">↑65.60</a>
+                                                <a class="jried" data-bind="text:volumn">10536</a>
+                                            </li>
+
+                                            <li><a class="jriea" data-bind="text:instrumentid">IH1803</a>
+                                                <a class="jrieb" data-bind="text:lastprice">2886.20</a>
+                                                <a class="color_red jriec" data-bind="text:updown,css:color">↑2.60</a>
+                                                <a class="jried" data-bind="text:volumn">14777</a>
+                                            </li>
+
+                                            <li><a class="jriea" data-bind="text:instrumentid">TF1806</a>
+                                                <a class="jrieb" data-bind="text:lastprice">96.435</a>
+                                                <a class="color_red jriec color_green"
+                                                   data-bind="text:updown,css:color">↓0.005</a>
+                                                <a class="jried" data-bind="text:volumn">7471</a>
+                                            </li>
+
+                                            <li><a class="jriea" data-bind="text:instrumentid">T1806</a>
+                                                <a class="jrieb" data-bind="text:lastprice">92.655</a>
+                                                <a class="color_red jriec color_green"
+                                                   data-bind="text:updown,css:color">↓0.035</a>
+                                                <a class="jried" data-bind="text:volumn">29054</a>
+                                            </li>
+                                            <!-- /ko -->
+                                        </ul>
+
+                                    </div>
+                                    <div class="time_delay">
+                                        <div class="time_delay_top">延时行情（延时15分钟）</div>
+                                        <div class="time_delay_cont">
+                                            <div class="time_delay_select">
+                                                <select class="select1"
+                                                        data-bind=" selectedOptions:selectProduct, options:productid, event:{change:productChange}">
+                                                    <option value="—	IF	—">— IF —</option>
+                                                    <option value="—	IC	—">— IC —</option>
+                                                    <option value="—	IH	—">— IH —</option>
+                                                    <option value="—	TF	—">— TF —</option>
+                                                    <option value="—	T	—">— T —</option>
+
+
+                                                </select>
+                                                <select class="select2"
+                                                        data-bind=" selectedOptions:selectInstrument,options:instrumentids, event:{change:instrumentChange}">
+                                                    <option value="—	IF1803	—">— IF1803 —</option>
+                                                    <option value="—	IF1804	—">— IF1804 —</option>
+                                                    <option value="—	IF1806	—">— IF1806 —</option>
+                                                    <option value="—	IF1809	—">— IF1809 —</option>
+
+                                                </select>
+                                                <div class="input_date" data-bind="text:delayDate">2018年03月01日</div>
+                                            </div>
+                                            <!-- ko ifnot:isOldBrower-->
+                                            <div class="delay_pic" style="width: 352px;height:163px;margin-left:-5%"
+                                                 id="priceChart">
+                                                <div style="text-align: left; position: relative; width: 352px; height: 163px;">
+                                                    <canvas width="352" height="163"
+                                                            style="position: absolute; width: 352px; height: 163px;"></canvas>
+                                                    <canvas width="352" height="163"
+                                                            style="position: absolute; width: 352px; height: 163px;"></canvas>
+                                                    <input type="text" class="dygraph-roller" size="2"
+                                                           style="display: none; top: 118px; left: 57px;">
+                                                    <div style="position: absolute; font-size: 14px; width: 50px; top: 98.8084px; left: 3px; text-align: right;">
+                                                        <div class="dygraph-axis-label dygraph-axis-label-y">4000</div>
+                                                    </div>
+                                                    <div style="position: absolute; font-size: 14px; width: 50px; top: 20.7993px; left: 3px; text-align: right;">
+                                                        <div class="dygraph-axis-label dygraph-axis-label-y">4050</div>
+                                                    </div>
+                                                    <div style="position: absolute; font-size: 14px; width: 60px; text-align: center; top: 146px; left: 26px;">
+                                                        <div class="dygraph-axis-label dygraph-axis-label-x">09:30</div>
+                                                    </div>
+                                                    <div style="position: absolute; font-size: 14px; width: 60px; text-align: center; top: 146px; left: 171.5px;">
+                                                        <div class="dygraph-axis-label dygraph-axis-label-x">
+                                                            11:30/13:00
+                                                        </div>
+                                                    </div>
+                                                    <div style="position: absolute; font-size: 14px; width: 60px; text-align: right; top: 146px; left: 292px;">
+                                                        <div class="dygraph-axis-label dygraph-axis-label-x">15:00</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="legend" style="margin-top:8px;margin-left:56px"><span
+                                                    style="font-weight: bold; color: #3f983f;"><div
+                                                    style="display: inline-block; position: relative; bottom: .5ex; padding-left: 1em; height: 1px; border-bottom: 2px solid#3f983f;"></div> 期货</span>
+                                                <span style="font-weight: bold; color: #4191e6;"><div
+                                                        style="display: inline-block; position: relative; bottom: .5ex; padding-left: 1em; height: 1px; border-bottom: 2px solid#4191e6;"></div> 现货</span>
+                                            </div>
+                                            <!-- /ko -->
+                                            <!-- ko if:isOldBrower--><!-- /ko-->
+                                            <div class="more" style="margin-top: -18px"><a
+                                                    href="#sj/yshq/" target="_blank">更多 &gt;</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endblock %}
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div style="display:none;"><img src="../static/img/cffexlogo.jpg"></div>
+
+
+    <div class="foot" style="display: block;">
+        <div class="footnr">
+            <div class="footnr_first">
+                <img src="../static/img/footnr-img1.gif" width="108" height="87" alt="">
+            </div>
+            <div class="footnr_second">
+                <h3>新闻公告</h3>
+
+                <ul>
+                    <li><a href="#xwgg/jysgg/" target="_blank">交易所公告</a></li>
+                    <li><a href="#xwgg/jysdt/" target="_blank">交易所动态</a></li>
+                    <li><a href="#xwgg/mtxw/" target="_blank">媒体新闻</a></li>
+                    <li><a href="#xwgg/cggg/" target="_blank">采购公告</a></li>
+                </ul>
+
+                <h3>数据</h3>
+                <ul>
+                    <li><a href="#sj/yshq/" target="_blank">延时行情</a></li>
+                    <li><a href="#sj/hqsj/" target="_blank">行情数据</a></li>
+                </ul>
+            </div>
+            <div class="footnr_third">
+                <h3>产品</h3>
+                <ul>
+                    <li><a href="#cp/hs300/" target="_blank">沪深300股指期货</a></li>
+                    <li><a href="#cp/sz50/" target="_blank">上证50股指期货</a></li>
+                    <li><a href="#cp/zz500/" target="_blank">中证500股指期货</a></li>
+
+                </ul>
+                <h3>其他栏目</h3>
+                <ul>
+                    <li><a href="http://www.e-cffex.com.cn/" target="_blank">期货期权学院</a></li>
+                    <li><a href="#fw/tzzfw/jryspxy/" target="_blank">衍生品知识</a></li>
+                    <li><a href="#flfg/" target="_blank">法律法规</a></li>
+                </ul>
+            </div>
+
+            <div class="footnr_fourth">
+                <h1>&nbsp;</h1>
+                <a href="##" class="foot_weixin"><img src="../static/img/foot-img1_1.png"
+                                                                         style="margin: 20px 15px 0 0">
+                    <div class="foot_down_div"><img src="../static/img/head-img1.jpg" width="99" height="100" alt="">
+                        <span class="text">微信二维码</span></div>
+                </a> <a href="http://weibo.com/cffexfabu"> <img src="../static/img/foot-img2_1.png"
+                                                                style="margin: 20px 15px 0 0"> </a> <a
+                    href="http://t.qq.com/cffexfabu"> <img src="../static/img/foot-img3_1.png"
+                                                           style="margin: 20px 15px 0 0"> </a>
+                <a href="http://si.trustutn.org/info?sn=800150821014442405509"> <img src="../static/img/foot-img4.png"
+                                                                                     style="margin: 20px 20px 0 0"></a>
+            </div>
+        </div>
+    </div>
+    <div class="end" style="display: block;">
+        <div class="endnr">
+            <div class="move_end_list">
+                <a href="#gyjys/jysjs/" target="_blank">关于我们</a><i>|</i>
+                <a href="#xwgg/mtxw/201512/t20151208_19387.html" target="_blank">APP微博微信</a><i>|</i>
+                <a href="#en_new/index.html" target="_blank">English</a>
+            </div>
+            <h1>中国金融期货交易所2011版权所有 <a href="http://www.miibeian.gov.cn/" target="_blank" style="color: #aaaaae">沪ICP备11042625号</a>
+            </h1>
+            <div class="endlist">
+                <ul>
+                    <a href="#gyjys/jysjs/" target="_blank">
+                        <li>关于我们</li>
+                    </a>
+                    <a href="#gyjys/lxwm/" target="_blank">
+                        <li>联系我们</li>
+                    </a>
+                    <a href="#gnq/bqsm/" target="_blank">
+                        <li>版权声明</li>
+                    </a>
+                    <a href="#xwgg/mtxw/201608/t20160818_19930.html" target="_blank">
+                        <li>友情链接</li>
+                    </a>
+                </ul>
+            </div>
+            <h2>建议使用IE9.0+浏览器</h2>
+        </div>
+    </div>
+    <!--  author by zhangyw 2013-2017 -->
+</div>
+
+</body>
+
+{% block js %}
+
+{% endblock %}
+
+</html>
